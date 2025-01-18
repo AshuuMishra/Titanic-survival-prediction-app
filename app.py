@@ -14,7 +14,7 @@ def survival(input_data):
         inp_data_reshaped = inp_data_array.reshape(1, -1)
         pred_in = loaded_model.predict(inp_data_reshaped)
         if pred_in[0] == 0:
-            return "The Person did not SURVIVE"
+            return "The Person did not Survive"
         else:
             return "The Person Survived"
     except ValueError:
@@ -31,9 +31,9 @@ def main():
     SibSp = st.text_input("Enter SibSp (0-5)", value="0")
     Parch = st.text_input("Enter Parch (0-6)", value="0")
     Fare = st.text_input("Enter Fare (0-512)", value="50")
-    C = st.text_input("Enter Embarked from which place (0, 1)", value="0")
-    Q = st.text_input("Enter Embarked from which place (0, 1)", value="0")
-    S = st.text_input("Enter Embarked from which place (0, 1)", value="0")
+    C = st.text_input("Enter C from which place (0, 1)", value="0")
+    Q = st.text_input("Enter Q from which place (0, 1)", value="0")
+    S = st.text_input("Enter S from which place (0, 1)", value="0")
 
     answer = ""  # Placeholder for prediction result
 
