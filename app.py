@@ -1,12 +1,13 @@
 #Application Code
 
 import numpy as np
-import pickle
+import joblib
 import streamlit as st
 
+# model = joblib.load('logistic_regression_model.pkl')
 # Load the model
 with open("logistic_regression_model.pkl", "rb") as file:
-    loaded_model = pickle.load(file)
+    loaded_model = joblib.load(file)
 
 def survival(input_data):
     try:
