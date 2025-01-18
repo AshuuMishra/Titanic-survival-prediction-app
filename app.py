@@ -31,14 +31,14 @@ def main():
     SibSp = st.text_input("Enter SibSp (0-5)", value="0")
     Parch = st.text_input("Enter Parch (0-6)", value="0")
     Fare = st.text_input("Enter Fare (0-512)", value="50")
-    C = st.text_input("Enter C from which place (0, 1)", value="0")
-    Q = st.text_input("Enter Q from which place (0, 1)", value="0")
-    S = st.text_input("Enter S from which place (0, 1)", value="0")
+    c_val = st.text_input("Enter C from which place (0, 1)", value="0")
+    q_val = st.text_input("Enter Q from which place (0, 1)", value="0")
+    s_val = st.text_input("Enter S from which place (0, 1)", value="0")
 
     answer = ""  # Placeholder for prediction result
 
     if st.button("Predict Survival"):
-        answer = survival([Pclass, Sex, Age, SibSp, Parch, Fare, C, Q, S])
+        answer = survival([Pclass, Sex, Age, SibSp, Parch, Fare, c_val, q_val, s_val])
         st.success(answer)
 
 if __name__ == '__main__':
